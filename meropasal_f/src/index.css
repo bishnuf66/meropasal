@@ -1,0 +1,620 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Quicksand:wght@400;500;600&family=Wavefont&display=swap');
+:root{
+    --primary: #E7E9EC;
+    --primarygrey:#ced1d6;
+    --primarydark:#94989E;
+    --accent: #D10024;
+    --accentdim: #CF2E49;
+    --accent2nd:#e53e5a;
+    --black:#000000;
+    --white:#ffff;
+    --fontnormal:1.3rem;
+    --fontsmall:1rem;
+    --fontbig:1.6rem;
+    --fonthuge:1.9rem;
+    --fonttiny:0.7rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'quicksand',sans-serif;
+    letter-spacing: 0.07rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.hover:hover{
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+input {
+    border: 1px solid black;
+    margin: 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+select {
+    padding: 5px;
+    border: 2px solid grey;
+}
+
+h2{
+    font-size: var(--fonthuge);
+    color: var(--accent2nd);
+    padding: 1rem 0.5rem;
+}
+h1{
+    font-size: var(--fontnormal);
+    padding: 1rem 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: rgb(0, 41, 135);
+}
+
+/* navbaar start */
+
+nav {
+    /* width: 100%; */
+    /* height: 80px; */
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+nav .logo {
+margin-left: 15px;
+    height: 45px;
+    width: 200px;
+}
+
+nav ul {
+    margin: auto;
+    display: flex;
+    font-family: 'quicksand', sans-serif;
+    font-size: var(--fontnormal);
+    /* transition: all 5s; */
+
+}
+
+nav ul li{
+    margin: 20px;
+}
+nav ul li:hover{
+    text-decoration: underline;    
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-right: 29px;
+}
+.search{
+    margin: 0 19px ;
+}
+.search input{
+    height: 40px;
+    margin-right: 3px;
+    width: 12rem;
+}
+.search input:focus{
+    border: none;
+}
+.search button{
+    border: none;
+    background-color: transparent;
+    margin-top: 6px;
+    
+}
+.icon{
+    font-size: 25px;
+}
+
+
+
+/* navbar stop */
+
+/* ============homepage start================ */
+
+.home{
+    width: 100%;
+    display: flex;
+
+}
+.home-links{
+    display: flex;
+    align-items: center;
+
+}
+
+.home-links .link{
+    padding: 0.5rem;
+    background-color: var(--primarygrey);
+    border-radius: 0.5rem;
+    margin: 1rem 0.5rem;
+    transition: 0.5s;
+}
+
+.home-links .link:hover{
+    background-color: var(--primarydark);
+}
+.category_filter{
+    background-image:linear-gradient(to right,var(--primary), var(--white));
+}
+.category_filter a{
+    /* width: 15%; */
+    display: block;
+    border-top:1px solid var(--primarydark) ;
+    font-weight: bolder;
+    padding: 0.5rem ;
+
+}
+.category_filter a:hover{
+    background-image:linear-gradient(to right, var(--primarygrey),var(--primary));
+
+}
+
+
+.filtered_product{
+    width: 80%;
+    background-image:linear-gradient(to right, var(--white),var(--primary));
+}
+
+/* ============homepage start================ */
+
+/* =======Signup options start============== */
+
+.signupoptions{
+    padding: 0 20rem;
+    background-image:linear-gradient(to right, var(--primarygrey),var(--primary));
+    text-align: center;
+
+}
+
+.signupoptions h2{
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.signoptions-container{
+    display: flex;
+}
+
+.signupoptions-card{
+    width: 30rem;
+    padding: 3rem 3rem;
+    box-shadow: 5px 0 15px var(--primarydark);
+    border-radius: 0.5rem;
+    margin: 4rem;
+    height: 20rem;
+    font-size: var(--fontnormal);
+    font-weight: bold;
+    background-color: var(--primary);
+    transition: 0.2s ease-in;
+}
+
+.signupoptions-card:hover{
+    box-shadow: 0 5px 15px var(--primarydark);
+}
+
+.signupoptions-card a{
+    padding: 1rem;
+    background-image: linear-gradient(to right,var(--accentdim),var(--accent),var(--accent2nd) ) ;
+    color: var(--primary);
+    border-radius: 0.5rem;
+    display: block;
+    margin-top: 2.5rem;
+    transition: 0.2s ease-in;
+}
+
+.signupoptions-card a:hover{
+    background-image: linear-gradient(to right,var(--accentdim),var(--accent2nd),var(--accent) ) ;
+    padding: 1.1rem;
+}
+
+
+/* =======Signup options end================ */
+
+/* +===============seller register start================== */
+
+.form{
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--primary);
+}
+
+.form input{
+    width: 10rem ;
+    margin: 0 2rem;
+}
+
+
+/* +===============seller register end================== */
+
+/* ==================CARD SECTION START========================= */
+.card{
+    height: 22rem;
+    width: 17rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px 15px;
+    box-shadow: 5px 0 15px var(--primarydark);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    background-color: var(--white);
+}
+.card:hover{
+    box-shadow: 0 5px 15px var(--primarydark);
+    transform: translateY(-0.1rem);
+}
+
+.card .card-image{
+    width: 98%;
+    height: 60%;
+    /* object-fit: fill; */
+    transition: 0.2s ease-in-out;
+
+}
+.card:hover .card-image{
+    transform: scale(1.05);
+}
+.card .card-button{
+    background-color: var(--accentdim);
+    color: var(--white);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+.card .card-button:hover{
+    padding:0.65rem ;
+}
+
+
+
+/* ==================CARD SECTION END=========================== */
+
+/* ==================Product Details section start================= */
+
+.product-details{
+    display: flex;
+    padding: 2.5rem;
+    
+
+}
+
+.product-details .product-image{
+    /* max-height: 30rem; */
+    width: 60%;
+}
+
+
+
+.product-details .product-desc{
+    width: 40%;
+    /* min-height: 30rem; */
+    position: relative;
+    background-image:linear-gradient(to right,var(--primary),var(--primary),var(--primarygrey)) ;   
+    font-size: var(--fontnormal); 
+}
+
+.product-details .product-desc .product-name{
+    font-size: var(--fonthuge);
+    font-weight: bold;
+}
+.product-seller{
+    display: flex;
+    align-items: center;
+    font-size: var(--fonttiny);
+}
+.product-seller img{
+    /* height: 25px; */
+    width: 25px;
+    border-radius: 50%;
+}
+
+.product-price,.product-rating{
+    width: 50%;
+    font-size: var(--fontbig);
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.product-category{
+    font-size: var(--fontsmall);
+    padding: 1rem 0;
+}
+
+.product-quantity button,input{
+    width: 3rem;
+}
+
+.product-addtocart,.product-order{
+    width: 50%;
+    padding: 1rem 2rem;
+    position: relative;
+    bottom: 0;
+}
+.product-details .product-addtocart{
+    color: var(--primary);
+    left: 0;
+    background-color:var(--accent2nd);
+    transition: 0.2s ease-in-out;
+}
+.product-details .product-addtocart:hover{
+    background-color: var(--accentdim);
+}
+
+.product-details .product-order{
+    color: var(--primary);
+    background-color: var(--primarydark);
+    right: 0;
+    transition: 0.2s ease-in-out;
+    opacity: 0.9;
+
+}
+.product-details .product-order:hover{
+    color: var(--white);
+    opacity: 1;
+
+}
+.order{
+    position: absolute;
+    /* display: none; */
+    background-color: rgba(206, 209, 214,0.7);
+    inset: 0;
+    position: fixed;
+
+}
+.order > button{
+    padding: 0.8rem;
+    margin: 1rem 2rem;
+    float: right;
+    background-color: var(--accent);
+    color: var(--white);
+    border-radius: 0.5rem;
+}
+/* ==================Product Details section end=================== */
+/* ==================Order page section start====================== */
+
+.order-form{
+    width: 50%;
+    height: 25rem;
+    margin: auto;
+    border: 1px solid var(--primarydark);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: var(--primarydark);
+    color: var(--white);
+    font-weight: 600;
+    font-size: var(--fontsmall);
+}
+.order-form .order-input{
+    margin: 4rem 0;
+}
+.order-form label{
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+.order-form input,select,span,option{
+    width: 15rem;
+    color: var(--black);
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.order-form button{
+    width: 80%;
+    margin: auto;
+    background-color: var(--accentdim);
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* ==================Order page section end======================== */
+
+/* ==================Start of Cart section========================= */
+
+.cart-container{
+    display: flex;
+}
+
+.cart-empty{
+    width: 30%;
+    margin: auto;
+    padding: 10rem 0;
+    font-size: var(--fontbig);
+    font-weight: bold;
+}
+
+.cart-items{
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    margin: 0.5rem ;
+    border-radius: 0.5rem;
+}
+
+.cart-items img{
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+.cart-items p{
+    font-size: var(--fontnormal);
+    margin: 2rem;
+}
+.cart-items .cart-decrease,.cart-increase,.cart-quantity,.cart-delete{
+    width: 6rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin: 0 0.4rem;
+}
+
+.cart-result{
+    background-color: var(--primarygrey);
+    padding: 2rem 5rem;
+    width: 33%;
+    font-size: var(--fontnormal);
+    font-weight: bold;
+    
+}
+.cart-result p{
+    margin: 2rem 0;
+}
+
+.cart-result button{
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--primarygrey);
+    border-radius: 0.5rem;
+}
+
+/* ==================End of Cart section=========================== */
+
+/* ====================Orders Page Start================================== */
+.container{
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    border: 1px solid var(--primarydark);
+    width: 80%;
+}
+.table .table-row{
+    border: 1px solid var(--primarydark);
+    align-items: center;
+    text-align: center;
+    font-size: var(--fontnormal);
+    font-weight: bold;
+    
+}
+
+.table img{
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.table-row button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.table-row button:hover + .orderstatus,.orderstatus:hover{
+    display: block;
+}
+
+
+
+.orderstatus{
+    display: none;
+}
+
+/* ====================Order Page End =================================== */
+
+/* ===========================Seller Homepage start====================== */
+
+.sellerhomepage{
+    font-size: var(--fonthuge);
+    color: var(--white);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: var(--accentdim);
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.sellerhomepage-product{
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sellerhomepage-product img{
+    width: 15rem;
+    margin: 0 2rem;
+}
+.sellerhomepage-product button{
+    padding: 0.5rem 1.5rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* ===========================Seller Homepage End======================== */
+
+/* Footer section start */
+footer{
+    /* width: 100%; */
+    /* height: 200px; */
+    /* margin: auto; */
+    display: flex;
+    color: var(--primary);
+    font-size: var(--fontsmall);
+    position: relative;
+    bottom: 0;
+    background-color: rgb(15, 23, 42);
+}
+footer hr{
+    width: 150px;
+}
+
+.footer-left,.footer-mid,.footer-right{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    flex-wrap: wrap;
+
+}
+.footer-mid{
+    margin-left: 70px;
+
+}
+.footer-right{
+    font-size: var(--fontsmall);
+}
+.footer-right input{
+    width: 70%;
+}
+
+.emailsub{
+    height: 38px;
+    width: 74px;
+    /* background-color: yellow; */
+    color: var(--primary);
+    
+}
+
+/* Footer section end */
